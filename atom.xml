@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-01T14:24:51.429Z</updated>
+  <updated>2019-06-11T09:51:04.225Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Optionals</title>
+    <link href="http://yoursite.com/2019/06/11/Optionals/"/>
+    <id>http://yoursite.com/2019/06/11/Optionals/</id>
+    <published>2019-06-11T01:40:12.000Z</published>
+    <updated>2019-06-11T09:51:04.225Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="optionals-可选型"><a href="#optionals-可选型" class="headerlink" title="optionals 可选型"></a>optionals 可选型</h1><h3 id="可选型如果能转换成指定的类型则转换，如果不能转换则可选型为-nil"><a href="#可选型如果能转换成指定的类型则转换，如果不能转换则可选型为-nil" class="headerlink" title="可选型如果能转换成指定的类型则转换，如果不能转换则可选型为 nil"></a>可选型如果能转换成指定的类型则转换，如果不能转换则可选型为 nil</h3><ul><li><p>可选型声明 — 显式声明</p><p>var a : Int ?  (在变量的类型后面加”?”) 此时 a 的默认值是nil</p><p>a = 12   // a 赋值 12</p></li><li><p>隐式</p><p>比如想让用户输入年龄,但是用户输入的并非Int类型</p><p>let  userInput =  “***”</p><p>var age = userInput.toInt()  //toInt 的返回值是Int? 意味着age将会是一个可选型的值，就意味着 age 可能为nil(比如 ：userInput = “abc” 的时候)</p><h4 id="可选型解包"><a href="#可选型解包" class="headerlink" title="可选型解包"></a>可选型解包</h4><p> var age :Int ?</p><p>age = 18</p><p>println(age) //Some 18</p><p>println(age!)  //18</p><p>println(“我的年龄是” + String(age))   //❌的，因为强制类型转换不能直接转换可选型的</p><p>println(“我的年龄是” + String(age!))  //✅的，age! 表示我已经明确知道此时age是有Int值的，</p><h6 id="在可选型变量的后面直接加-‘-’-进行解包操作"><a href="#在可选型变量的后面直接加-‘-’-进行解包操作" class="headerlink" title="在可选型变量的后面直接加 ‘!’ 进行解包操作"></a>在可选型变量的后面直接加 ‘!’ 进行解包操作</h6></li></ul><p>强制类型转换不能转换可选型,除非明确可选型有值</p><h1 id="String-和-Character"><a href="#String-和-Character" class="headerlink" title="String 和 Character"></a>String 和 Character</h1><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><ul><li><p>创建一个空的字符串变量</p><p> var emptyStr = “”</p><p>Var anotherEmptyStr = String()</p></li><li><p>字符串变量 for- in</p><p>var str = “hello Owen wang”</p><p>for c  in str {</p><p>//…</p><p>}</p></li><li><p>计算字符串的长度</p><p>countElements(str)   //str 中的空格也会被算做一个字符，中文算一个字符，表情符号也是一个字符</p><h3 id="Character"><a href="#Character" class="headerlink" title="Character"></a>Character</h3></li><li><p>创建字符变量 Character</p><p>Var ch:Character = “o”</p><p>字符ch 只能有一个字符</p><p>字符串可以通过append(字符)的方式拼接字符</p><p>例如： </p><p>​        var str = “hello owen wang”</p><p>​        var ch:Character = “!”</p><p>​        str .append(ch)</p><p>​        println(str)// “hello Owen wang !”</p><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>​        字符串可以直接 + 字符串，但是新版本中不能直接 + 字符(Character)</p><p>​        var a =”abc”</p><p>​        var b = “def”</p><p>​        var c:Character = “g”</p><p>​        a + b // ✅ “abcdef”</p><p>​        a + c // ❌ 编译时出错，不支持字符串直接 + 字符</p></li></ul><p>  ​                </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;optionals-可选型&quot;&gt;&lt;a href=&quot;#optionals-可选型&quot; class=&quot;headerlink&quot; title=&quot;optionals 可选型&quot;&gt;&lt;/a&gt;optionals 可选型&lt;/h1&gt;&lt;h3 id=&quot;可选型如果能转换成指定的类型则转换，如果不
+      
+    
+    </summary>
+    
+    
+      <category term="Optionals/String Character" scheme="http://yoursite.com/tags/Optionals-String-Character/"/>
+    
+  </entry>
   
   <entry>
     <title>大傻子</title>
