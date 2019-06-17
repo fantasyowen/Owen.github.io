@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-11T09:54:24.706Z</updated>
+  <updated>2019-06-17T03:22:22.258Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>克隆慢</title>
+    <link href="http://yoursite.com/2019/06/17/%E5%85%8B%E9%9A%86%E6%85%A2/"/>
+    <id>http://yoursite.com/2019/06/17/克隆慢/</id>
+    <published>2019-06-17T03:09:57.000Z</published>
+    <updated>2019-06-17T03:22:22.258Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="今天第一次克隆iOS项目，在pod-install-时GitHub克隆特别慢"><a href="#今天第一次克隆iOS项目，在pod-install-时GitHub克隆特别慢" class="headerlink" title="今天第一次克隆iOS项目，在pod install 时GitHub克隆特别慢"></a>今天第一次克隆iOS项目，在pod install 时GitHub克隆特别慢</h1><p>相信大家已经感受到pod install速度越来越慢了，网上提供了几种解决方案，但是都没有完全解决速度慢的问题。</p><ol><li>使用国内镜像的Specs</li><li>在pod install时使用命令<code>pod install --no-repo-update</code></li><li>使用proxychains使终端命令走代理</li></ol><p>下面就来说明一下这几种方法为何没有完全解决问题</p><ol><li>使用国内镜像的Specs<br>这个只是加快了Specs下载更新速度，而且如果使用国内镜像Specs，那么Podfile中就必须指明使用这个Specs。</li><li>在pod install时使用命令<code>pod install --no-repo-update</code><br>install时不更新本地库，但如果第一次install还是要去github clone代码</li><li>使用proxychains使终端命令走代理<br>这个只是使pod命令走代理，git download的时候不会走代理</li></ol><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ul><li><p>执行 sudo vi /etc/hosts</p><p> i  — insert </p><p> 输入 192.30.253.113 github.com</p></li></ul><p>​        151.101.77.194 github.global.ssl.fastly.net</p><p>​        按 esc  然后 “冒号 :wq” 退出保存</p><ul><li>执行命令刷新DNS缓存<br>sudo killall -HUP mDNSResponder</li><li><p>重新 pod install </p><h4 id="自己尝试了一下还是有用的，-速度一下从-4KiB-s-干到100KiB-s-左右"><a href="#自己尝试了一下还是有用的，-速度一下从-4KiB-s-干到100KiB-s-左右" class="headerlink" title="自己尝试了一下还是有用的， 速度一下从 4KiB/s 干到100KiB/s 左右"></a>自己尝试了一下还是有用的， 速度一下从 4KiB/s 干到100KiB/s 左右</h4></li></ul><p>此记。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;今天第一次克隆iOS项目，在pod-install-时GitHub克隆特别慢&quot;&gt;&lt;a href=&quot;#今天第一次克隆iOS项目，在pod-install-时GitHub克隆特别慢&quot; class=&quot;headerlink&quot; title=&quot;今天第一次克隆iOS项目，在po
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+      <category term="git github" scheme="http://yoursite.com/tags/git-github/"/>
+    
+  </entry>
   
   <entry>
     <title>Optionals</title>
